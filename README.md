@@ -13,7 +13,7 @@ Automatically detect pending delivery delays, calculate financial penalties base
 
 ---
 
-## 🧩 Architecture Diagram 
+## Architecture Diagram 
 
 **Workflow Flow:**
 
@@ -37,7 +37,7 @@ Automatically detect pending delivery delays, calculate financial penalties base
 ---
 ## Implementation Steps
 
-### 🤖 Route Financial Analysis Agent  
+### Route Financial Analysis Agent  
 
 The **Route Financial Analysis Agent** calculates penalties for delayed delivery routes and updates ServiceNow with the results.
 
@@ -94,7 +94,7 @@ Once penalties are calculated, this agent determines routing actions and sends d
 
 ---
 
-####  🌐 n8n Orchestrator (Route Coordination)
+####   n8n Orchestrator (Route Coordination)
 
 The **n8n Route Orchestrator** acts as a coordination layer between ServiceNow and external MCP systems.  
 It handles webhook requests, validates payloads, and communicates with the Logistics, Retail, and ServiceNow MCP clients.
@@ -111,7 +111,7 @@ It handles webhook requests, validates payloads, and communicates with the Logis
 
 ---
 
-### 🧮 Example Data Flow  
+### Example Data Flow  
 
 
 **Delivery Delay Record Input**
