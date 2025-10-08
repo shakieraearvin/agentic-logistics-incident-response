@@ -16,6 +16,7 @@ Automatically detect pending delivery delays, calculate financial penalties base
 ## Architecture Diagram 
 
 **Workflow Flow:**
+![System Flow Diagram](diagram.png)
 
 **Delivery Delay Record (Pending)**  
 ⬇️  
@@ -41,7 +42,8 @@ Automatically detect pending delivery delays, calculate financial penalties base
 
 The **Route Financial Analysis Agent** calculates penalties for delayed delivery routes and updates ServiceNow with the results.
 
-![Route Financial Analysis Agent](images/route-financial-agent.png)  
+![Route Financial Analysis Agent](images/route-financial-agent.png)
+![Route Financial Analysis Agent Tools](images/route-financial-agent-tools.png)  
 *Figure 2 – Route Financial Analysis Agent configuration showing all record operations and Compute Route Financial Impact script.*
 
 #### Record Operations
@@ -74,7 +76,8 @@ The **Route Financial Analysis Agent** calculates penalties for delayed delivery
 
 Once penalties are calculated, this agent determines routing actions and sends data to external systems for rerouting and coordination.
 
-![Route Decision Agent](images/route-decision-agent.png)  
+![Route Decision Agent](images/route-decision-agent.png) 
+![Route Decision Agent Tools](images/route-decision-agent-tools.png)  
 *Figure 3 – Route Decision Agent setup showing record operations and Webhook Tool script.*
 
 #### Record Operations
@@ -99,7 +102,7 @@ Once penalties are calculated, this agent determines routing actions and sends d
 The **n8n Route Orchestrator** acts as a coordination layer between ServiceNow and external MCP systems.  
 It handles webhook requests, validates payloads, and communicates with the Logistics, Retail, and ServiceNow MCP clients.
 
-![n8n Workflow Detail](images/n8n-agents-detail.png)  
+![n8n Workflow Detail](images/n8n-workflow-canvas.png)  
 *Figure 4 – n8n workflow canvas showing AI Agent, Bedrock Chat Model, and MCP clients integration.*
 
 #### Workflow Logic
@@ -166,7 +169,7 @@ Explore running route calculations in parallel for larger datasets.
 Build simple monitoring or alerting for webhook errors to make troubleshooting faster.
 
 ## 🧾 Test Results
-
+![AI Agent Test Results](images/ai-conversation-log.png)  
 Figure 5 – ServiceNow AI Agent conversation log showing successful retrieval, supply agreement lookup, and computed penalties.
 Validation Summary
 ✅ Delivery Delay record retrieved successfully
@@ -177,6 +180,7 @@ Validation Summary
  
 
 ##Business Value
+![Confrimation Results ](images/external-system-confirmation.png) 
 This AI-driven automation system provides measurable operational value for PepsiCo’s Supply Chain:
 Efficiency Gains: Reduces manual triage time for delivery delay incidents by over 60%.
 Financial Accuracy: Automatically calculates penalties and updates incident records, ensuring precise financial accountability.
